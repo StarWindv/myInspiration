@@ -1,0 +1,50 @@
+# 错误类提示
+Err -01 : Generalization error (PlaceHolder)
+        : 通用错误 (占位符)
+
+Err -02 : Inner Error
+        : 程序内部错误
+
+Err 000 : Command Not Found
+        : 命令未找到
+    说明未找到目标命令
+
+Err 001 : Permission Denied
+        : 权限不足
+    说明不具有当前目标命令或文件的访问权限
+
+Err 002 : Parameter quantity not aligned
+        : 参数量未对齐
+    说明命令参数数量不正确
+
+Err 003 : Failed to execute external command
+        : 执行外部命令失败
+    说明因为某错误而导致执行某外部命令时出错
+
+Err 004 : Can not load module
+        : 无法加载模块
+    说明因为某错误而导致某模块无法被加载
+
+
+# 警告类提示
+Warn 001 : Currently only supports aliases without parameters
+         : 当前仅支持不带参数的别名
+    说明进行别名操作时视图，视图让别名具有默认参数
+    |> 触发方式: alias alias_name command_name args
+
+Warn 002 : Loop Alias
+         : 循环别名
+    说明进行别名操作时，出现了多个别名互为别名的情况
+
+Warn 003 : Module doesn't have func 'handle'
+         : 模块不具有函数 'handle'
+
+Warn 004 : Multi layer terminal nesting
+         : 多层终端嵌套
+    说明当前终端运行在自身的多层嵌套环境中
+
+# 阻止类提示
+Ban 001 : The beginning of an alias cannot be '.'
+        : 别名不能以 '.' 开头
+    说明试图创建一个以 '.' 开头的别名, 这可能会造成保护命令被污染的情况
+    |> 触发方式: alias .alias_name command_name
