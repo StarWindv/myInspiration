@@ -44,12 +44,12 @@ rc [command_name] : 删除目标命令(空参数代表完全重置)
 
 ```python
 # commands/hello.py
-def main(*args, **kwgs):
+def main(*args, **kwargs):
     print("Hello, Custom Function!")
 ```
 文件名就是新的命令名
 
-无论你的main函数需不需要参数，我都建议你在里面加入 *args, **kwgs 以吸收参数，因为终端会传递一个列表给你的main函数
+无论你的main函数需不需要参数，我都建议你在里面加入 *args, **kwargs 以吸收参数，因为终端会传递一个列表给你的main函数
 
 
 ## 贡献
